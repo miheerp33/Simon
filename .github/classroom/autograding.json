@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Test Cases Not Changed ",
+      "setup": "git fetch --unshallow --update-head-ok origin '+refs/heads/*:refs/heads/*'",
+      "run": "[ -z \"$(git log feedback..main ./test/*)\" ]  ",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
+      "name": "Output",
+      "setup": "",
+      "run": "gradle test --tests FirstTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
